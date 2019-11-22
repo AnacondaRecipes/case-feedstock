@@ -11,8 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  noarch: python
 
 requirements:
   build:
@@ -22,7 +23,6 @@ requirements:
     - python
     - six
     - nose >=1.3.7
-    - unittest2 >=0.5.1  # [py26]
     - mock >=2.0.0
 
 test:
